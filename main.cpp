@@ -1,5 +1,6 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include "Wordle.h"
 
 int main(int argc, char *argv[])
 {
@@ -10,6 +11,11 @@ int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
     const QUrl url(QStringLiteral("qrc:/main.qml"));
+
+    qmlRegisterSingletonType<Wordle>("Wordle", 1, 0, "Wordle", Wordle::singletonProvider);
+
+    qmlRegisterSingletonType(QUrl("qrc:/Styles.qml"), "Theme", 1, 0, "Theme");
+
     QObject::connect(
         &engine,
         &QQmlApplicationEngine::objectCreated,

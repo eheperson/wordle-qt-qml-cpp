@@ -1,5 +1,8 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
+        <file>WordleBoard.qml</file>
+        <file>Styles.qml</file>
+        <file>resources/words.txt</file>
     </qresource>
 </RCC>
