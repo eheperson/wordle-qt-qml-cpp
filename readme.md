@@ -1,4 +1,4 @@
-# Sudoku Game
+# Wordle Game
 
 This is a Wordle game implemented in C++ and QML using the Qt framework.
 
